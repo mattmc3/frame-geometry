@@ -14,7 +14,7 @@ file.
 ** Install
 Assuming ~/.emacs.d is your emacs home:
 
-Install with `git clone https://github.com/mattmc3/framegeometry ~/.emacs.d/private/framegeometry`
+Install with ~git clone https://github.com/mattmc3/framegeometry ~/.emacs.d/private/framegeometry~
 
 To use this configuration layer, add it to your =~/.spacemacs=. You will need to
 add =framegeometry= to the existing =dotspacemacs-configuration-layers= list in this
