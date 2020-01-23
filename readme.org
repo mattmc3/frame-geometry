@@ -1,7 +1,7 @@
 #+TITLE: framegeometry
 #+TAGS: layer|spacemacs|geometry
 
-* framegeometry
+** Description
 Restore your Emacs window to its prior position with Spacemacs
 
 ** How it works
