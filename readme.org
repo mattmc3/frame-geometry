@@ -1,0 +1,21 @@
+#+TITLE: framegeometry
+#+TAGS: layer|spacemacs|geometry
+
+* framegeometry
+Restore your Emacs window to its prior position with Spacemacs
+
+** How it works
+Window position is stored in a framegeometry in your emacs home. Ususally, that is ~/.emacs.d
+or ~/.config/emacs.d. When Emacs loads, it looks for that file and uses it to set window position.
+If it's not found, it moves on gracefully. When Emacs closes, that file is saved with updates to
+the last position. If you experience problems, it is safe to delete the ~/.emacs.d/framegeometry
+file.
+
+** Install
+Assuming ~/.emacs.d is your emacs home:
+
+Install with `git clone https://github.com/mattmc3/framegeometry ~/.emacs.d/private/framegeometry`
+
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =framegeometry= to the existing =dotspacemacs-configuration-layers= list in this
+file.
