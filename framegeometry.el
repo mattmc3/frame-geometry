@@ -1,10 +1,15 @@
+;;; Using width and height from frame-text-* to properly
+;;; restore the geometry of Emacs application.
+;;; See:
+;;;    https://www.gnu.org/software/emacs/manual/html_node/elisp/Frame-Layout.html
+;;;    https://www.gnu.org/software/emacs/manual/html_node/elisp/Frame-Size.html
 (defun save-framegeometry ()
   "Gets the current frame's geometry and saves to ~/.emacs.d/framegeometry."
   (let (
         (framegeometry-left (frame-parameter (selected-frame) 'left))
         (framegeometry-top (frame-parameter (selected-frame) 'top))
-        (framegeometry-width (frame-parameter (selected-frame) 'width))
-        (framegeometry-height (frame-parameter (selected-frame) 'height))
+        (framegeometry-width (frame-text-width (selected-frame)))
+        (framegeometry-height (frame-text-height (selected-frame)))
         (framegeometry-file (expand-file-name "framegeometry" user-emacs-directory))
         )
 
@@ -32,8 +37,7 @@
   )
 
 (defun load-framegeometry ()
-  "Loads ~/.emacs.d/framegeometry which should load the previous frame's
-geometry."
+  "Loads ~/.emacs.d/framegeometry which should load the previous frame's geometry."
   (let ((framegeometry-file (expand-file-name "framegeometry" user-emacs-directory)))
     (when (file-readable-p framegeometry-file)
       (load-file framegeometry-file)))
