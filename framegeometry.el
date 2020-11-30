@@ -8,8 +8,8 @@
   (let (
         (framegeometry-left (frame-parameter (selected-frame) 'left))
         (framegeometry-top (frame-parameter (selected-frame) 'top))
-        (frame-geometry-width (frame-text-width (selected-frame)))
-        (frame-geometry-height (frame-text-height (selected-frame)))
+        (framegeometry-width (frame-text-width (selected-frame)))
+        (framegeometry-height (frame-text-height (selected-frame)))
         (framegeometry-file (expand-file-name "framegeometry" user-emacs-directory))
         )
 
